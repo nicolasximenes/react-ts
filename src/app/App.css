@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --brand-color: #9333EA;
+  --brand-color-hover: #A855F7;
+
+  --gray-50: #F9FAFB;
+  --gray-100: #F3F4F6;
+  --gray-200: #E5E7EB;
+  --gray-700: #374151;
+  --gray-800: #1F2937;
+  --gray-900: #111827;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: var(--gray-50);
+}
+
+body,
+input,
+button {
+  font-size: 1.6rem;
+  font-family: 'Inter', sans-serif;
+}
+
+button {
+  border: 0;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  color: var(--gray-50);
+  background-color: var(--brand-color);
+  cursor: pointer;
+  transition: all ease-in-out .3s;
+}
+
+button:hover {
+  background-color: var(--brand-color-hover);
+}
+
+input {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: .1rem solid var(--gray-700);
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.flex {
+  display: flex;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.my-3 {
+  margin: 3rem 0;
+}
+
+.mx-3 {
+  margin: 0 3rem;
+}
+
+.mt-3 {
+  margin-top: 3rem;
+}
+
+.mb-3 {
+  margin-bottom: 3rem;
+}
+
+.py-3 {
+  padding: 3rem 0;
+}
+
+.px-3 {
+  padding: 0 3rem;
+}
+
+.link {
+  font-weight: 500;
+}
