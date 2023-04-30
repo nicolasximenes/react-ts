@@ -1,7 +1,7 @@
 import { Api } from "../ApiConfig";
 import { ApiException } from "../ApiException";
 
-interface ITarefa {
+export interface ITarefa {
   id: number;
   title: string;
   isCompleted: boolean;
@@ -25,7 +25,7 @@ const getById = async (id: number): Promise<ITarefa | ApiException> => {
   }
 };
 
-const create = async (dataToCreate: Omit<ITarefa, 'id'>): Promise<ITarefa[] | ApiException> => {
+const create = async (dataToCreate: Omit<ITarefa, 'id'>): Promise<ITarefa | ApiException> => {
   try {
     const { data } = await Api().post<any>('/tarefas', dataToCreate);
     return data;
@@ -34,7 +34,7 @@ const create = async (dataToCreate: Omit<ITarefa, 'id'>): Promise<ITarefa[] | Ap
   }
 };
 
-const updateById = async (id: string, dataToUpdate: ITarefa): Promise<ITarefa | ApiException> => {
+const updateById = async (id: number, dataToUpdate: ITarefa): Promise<ITarefa | ApiException> => {
   try {
     const { data } = await Api().put(`/tarefas/${id}`, dataToUpdate);
     return data;

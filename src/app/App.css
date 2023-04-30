@@ -52,6 +52,15 @@ input {
   border: .1rem solid var(--gray-700);
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 640px;
+}
+
 .input-group {
   display: flex;
   flex-direction: column;
@@ -85,6 +94,10 @@ input {
   margin-top: 3rem;
 }
 
+.mt-2 {
+  margin-bottom: 2rem;
+}
+
 .mb-3 {
   margin-bottom: 3rem;
 }
@@ -97,6 +110,40 @@ input {
   padding: 0 3rem;
 }
 
+.w-100 {
+  width: 100%;
+}
+
 .link {
   font-weight: 500;
+}
+
+.task-item {
+  background-color: var(--gray-100);
+  align-items: center;
+  padding: 1.5rem;
+  width: 100%;
+  border-radius: .6rem;
+  transition: all ease-in-out .2s;
+}
+
+.task-item:hover {
+  background-color: var(--gray-200);
+}
+
+.task-item input[type="checkbox"] {
+  cursor: pointer;
+}
+
+.task-item button {
+  background-color: #aa0000;
+}
+
+.task-item button:hover {
+  background-color: #da1a1a;
+}
+
+.btn-delete {
+  /* margin-bottom: 1.5rem; */
+  margin-left: auto;
 }
